@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Affirmation</title>
+  <title>Daily Pregnancy Affirmation</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,6 +16,10 @@
     .quote-container {
       max-width: 600px;
       text-align: center;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .quote {
       font-size: 1.5em;
@@ -37,19 +41,87 @@
 
 <script>
   const quotes = [
-    { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
-    { text: "Start where you are. Use what you have. Do what you can.", author: "Arthur Ashe" },
-    { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
-    { text: "Success is not the key to happiness. Happiness is the key to success.", author: "Albert Schweitzer" },
-    { text: "You are never too old to set another goal or to dream a new dream.", author: "C.S. Lewis" }
+    { text: "My body knows exactly how to nurture and grow my baby." },
+    { text: "I am strong, capable, and prepared for this beautiful journey." },
+    { text: "Every change in my body is a reflection of the love and strength it holds." },
+    { text: "My baby is healthy, safe, and growing beautifully." },
+    { text: "I am deeply connected to my baby and feel their love every day." },
+    { text: "I trust the process of pregnancy and childbirth." },
+    { text: "Each day, I am grateful for this gift of life within me." },
+    { text: "I am calm, centered, and at peace." },
+    { text: "My body was made for this, and I trust it completely." },
+    { text: "I embrace each moment, knowing it brings me closer to meeting my baby." },
+    { text: "I am proud of the miracle my body is creating." },
+    { text: "I radiate love, positivity, and gratitude to my baby." },
+    { text: "I am open to all the beautiful changes this journey brings." },
+    { text: "I listen to my body’s needs and respond with love." },
+    { text: "I am filled with joy and gratitude for this experience." },
+    { text: "I accept myself fully, exactly as I am in this moment." },
+    { text: "My baby and I are growing stronger and healthier together." },
+    { text: "I am filled with courage, confidence, and peace." },
+    { text: "I release any fears and replace them with hope and excitement." },
+    { text: "I am in tune with my body and its wisdom." },
+    { text: "My love for my baby grows every day." },
+    { text: "I am prepared for the unique and beautiful birth experience meant for me." },
+    { text: "I trust my instincts; they will guide me and protect my baby." },
+    { text: "I deserve rest, love, and all the care I need." },
+    { text: "I am grateful for each kick, roll, and flutter that reminds me of this precious life." },
+    { text: "I have all the love and support I need to bring my baby into this world." },
+    { text: "I am at peace with this journey and the timing of my baby’s arrival." },
+    { text: "My mind and body are in perfect harmony for a healthy pregnancy." },
+    { text: "I nurture myself and my baby with healthy choices and self-care." },
+    { text: "Every deep breath brings calm and strength to me and my baby." },
+    { text: "I choose to focus on the joy and love that surrounds me." },
+    { text: "I am proud of the amazing things my body is doing." },
+    { text: "My bond with my baby grows deeper with each passing day." },
+    { text: "I am grateful for this new chapter in my life." },
+    { text: "I trust that everything is unfolding as it should." },
+    { text: "I am patient, knowing that my baby will arrive at the perfect time." },
+    { text: "My body is the perfect home for my growing baby." },
+    { text: "I honor the miracle of pregnancy and the beauty of my changing body." },
+    { text: "I am worthy of the happiness and excitement I feel." },
+    { text: "I let go of all negative thoughts and embrace only positivity." },
+    { text: "I am resilient, strong, and full of life." },
+    { text: "My baby feels all the love and joy I radiate." },
+    { text: "I give myself permission to feel proud of my strength and beauty." },
+    { text: "I am grateful for the support of those who love me and my baby." },
+    { text: "I trust that I am being prepared in every way for motherhood." },
+    { text: "I accept the changes in my body with love and gratitude." },
+    { text: "I am grateful for my body’s ability to nurture new life." },
+    { text: "I look forward to meeting my baby with love and excitement." },
+    { text: "I cherish each day of this precious journey." },
+    { text: "I am surrounded by love, and I pass that love on to my baby." },
+    { text: "I embrace all my emotions and release any fears with love." },
+    { text: "I am creating a calm, peaceful environment for my baby." },
+    { text: "I trust my body’s wisdom as I prepare for childbirth." },
+    { text: "I am filled with excitement and love for the future." },
+    { text: "I am empowered by the journey of pregnancy and motherhood." },
+    { text: "I am calm, confident, and ready for each new step." },
+    { text: "My baby is a blessing, and I am so grateful." },
+    { text: "I give myself permission to rest and recharge when needed." },
+    { text: "I trust in the beautiful bond my baby and I are building." },
+    { text: "I let go of any stress and embrace calmness." },
+    { text: "I am connected to the countless mothers who have gone before me." },
+    { text: "My body, mind, and spirit are prepared for this incredible journey." },
+    { text: "Each day, I am one step closer to meeting my little miracle." },
+    { text: "I surround myself with positivity and warmth." },
+    { text: "I am in awe of the strength and love within me." },
+    { text: "My body provides a safe and nurturing space for my baby." },
+    { text: "I find joy in every small milestone of my pregnancy." },
+    { text: "I am proud of my journey and trust in its unfolding." },
+    { text: "I am filled with gratitude and excitement for what’s to come." },
+    { text: "I am learning, growing, and preparing every day." },
+    { text: "I choose to feel happiness, joy, and love." },
+    { text: "I embrace the unique beauty of my pregnant body." },
+    { text: "I am calm, capable, and ready for this experience." },
+    { text: "My heart and my mind are open to the journey ahead." },
+    { text: "I am deserving of this love and joy, and I welcome it fully." }
   ];
 
-  // Function to get today's quote based on the day of the year
   function getTodaysQuote() {
     const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
     const quote = quotes[dayOfYear % quotes.length]; // Cycle through quotes
     document.getElementById("quote").textContent = quote.text;
-    document.getElementById("author").textContent = `– ${quote.author}`;
   }
 
   getTodaysQuote();
