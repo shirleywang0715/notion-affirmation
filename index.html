@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Pregnancy Affirmation</title>
-
- <!-- Link to Google Fonts for elegant and handwritten fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&family=Great+Vibes&display=swap">
   
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&family=Great+Vibes&display=swap">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,27 +14,50 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: transparent; /* Set background as transparent */
       margin: 0;
+      background-color: #f7f6f3; /* Default background (light mode) */
+      color: #333; /* Default text color */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
     }
+
     .quote-container {
-      max-width: 400px;
+      max-width: 600px;
       text-align: center;
-      padding: 40px 20px; /* Top and bottom padding added */
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+      padding: 40px 20px;
+      background-color: white; /* Default container background (light mode) */
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for theme changes */
     }
+
     .quote {
-      font-family: 'Great Vibes', cursive; /* Handwritten style */
-      font-size: calc(1em + 2vw); /* Responsive font size based on viewport width */
+      font-family: 'Dancing Script', cursive;
+      font-size: calc(1em + 2vw);
       font-weight: bold;
       margin-bottom: 0.5em;
     }
+
     .author {
-      font-family: 'Playfair Display', serif; /* Elegant style */
-      font-size: 1em;
+      font-family: 'Playfair Display', serif;
+      font-size: calc(0.8em + 0.5vw);
       color: #555;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212; /* Dark background */
+        color: #e0e0e0; /* Light text for contrast */
+      }
+
+      .quote-container {
+        background-color: #1e1e1e; /* Dark container background */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adjust shadow for dark mode */
+      }
+
+      .author {
+        color: #aaa; /* Softer text color for author */
+      }
     }
   </style>
 </head>
